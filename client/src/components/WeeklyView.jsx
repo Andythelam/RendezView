@@ -113,8 +113,10 @@ const WeeklyView = ({
           userAvailabilities: newAvailabilities,
         };
 
-    try {
-      const response = await fetch(isOrganizer ? '/api/newEvent' : '/api/availability/:link', {
+
+        // (`https://rendezview-server.vercel.app/api/availability/${link}`); 
+    try { // MUST CHANGE LINK TO WHATEVER SERVER IS BEING HOSTED ON
+      const response = await fetch(isOrganizer ? 'https://rendezview-server.vercel.app/api/newEvent' : 'https://rendezview-server.vercel.app/api/availability/:link', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(postData),
