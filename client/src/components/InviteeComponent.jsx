@@ -37,7 +37,7 @@ const InviteeComponent = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`/api/availability/${link}`); // Replace <link> with the actual link
+        const response = await fetch(`https://rendezview-server.vercel.app/api/availability/${link}`); // MUST CHANGE LINK TO WHATEVER SERVER IS BEING HOSTED ON
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
