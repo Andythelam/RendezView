@@ -124,7 +124,7 @@ const WeeklyView = ({
       if (response.ok) {
         const result = await response.json();
         if (isOrganizer) {
-          const formattedLink = `http://localhost:5001/availability/${result.link}`;
+          const formattedLink = `https://rendezview-client.vercel.app//availability/${result.link}`; // change static link if hosted elsewhere
           setGeneratedLink(formattedLink);
         }
         console.log('Success: Request Complete', result);
