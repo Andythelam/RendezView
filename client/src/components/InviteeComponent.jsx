@@ -98,7 +98,7 @@ const InviteeComponent = () => {
           meetingName={meetingName}
           meetingDescription={meetingDescription}
           meetingLocation={meetingLocation}
-          generatedLink={link} // change this when site is hosted
+          generatedLink={`https://rendezview.vercel.app/availability/${link}`} // change this when site is hosted
         />
         <hr />
         <CustomUser
